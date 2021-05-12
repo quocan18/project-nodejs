@@ -1,7 +1,7 @@
 const Product = require("../models/Product.model");
 
-exports.test = function (rep, res) {
-  res.send("Hello from controllers");
+exports.GetList = function (req, res) {
+  res.send("Hello");
 };
 
 //Operation 1: Create

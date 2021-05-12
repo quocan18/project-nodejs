@@ -1,14 +1,10 @@
 const express = require("express");
-const BodyParser = require("body-parser");
-const product = require("./routes/product.route");
+const customer = require("./routes/customer.route");
 const dbConfig = "mongodb://localhost:27017/products_info";
 const mongoose = require("mongoose");
 const app = express();
 
-app.use(BodyParser.json());
-app.use(BodyParser.urlencoded({ extended: true }));
-
-app.use("/products", product);
+app.use("/products", customer);
 
 // Connect to the database
 mongoose.set("useCreateIndex", true);
